@@ -1,6 +1,5 @@
 <html lang="zh"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>游戏试玩</title>
   <style>
     /* 基础重置与布局 */
@@ -14,7 +13,7 @@
 
     .container {
       width: 100%;
-      height: 100%;
+      height: -webkit-calc(100% + 400px);
       position: relative;
       overflow: hidden;
     }
@@ -23,11 +22,10 @@
       width: 100vw;
       height: 100%;
       border: none;
-      margin-top: 0;
+      margin-top: -180px; /* 可根据需要调整 */
       display: block;
     }
-
-    /* 悬浮按钮容器 - 居中靠上 */
+     /* 悬浮按钮容器 - 居中靠上 */
     .floating-buttons {
       position: fixed;
       top: 0px;
@@ -36,13 +34,13 @@
       z-index: 1000;
       display: flex;
       gap: 15px;
-      background-color: rgba(0, 0, 0, 1.0);
+      background-color: rgba(0, 0, 0, 0.0);
       padding: 4px 22px;
       border-radius: 0px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
     .floating-buttons a {
-      color: #333;
+      color: #444;
       text-decoration: none;
       font-size: 14px;
       font-weight: bold;
@@ -53,68 +51,27 @@
       transition: all 0.3s ease;
       white-space: nowrap;
     }
+
     .floating-buttons a:hover {
       background-color: #007acc;
       color: white;
       border-color: #007acc;
     }
+    
   </style>
 
 <myflashextensionid id="knfhpjhiamcofffhagflplclogcmcjai"></myflashextensionid>
 </head>
 <body>
-
   <!-- 悬浮按钮：返回首页 和 返回游戏列表 -->
   <div class="floating-buttons">
     <a href="index.html">返回首页</a>
-    <a href="./tea1.html">返回游戏列表</a>
+    <a href="tea1.html">返回游戏列表</a>
   </div>
-
+  
   <!-- 主要内容：嵌入外部页面 -->
-  <div class="container" id="container" style="height: calc(100% + 310px);">
-    <iframe id="iframeid" src="./pgz.html" frameborder="0" scrolling="yes" style="margin-top: -230px;" data-ruffle-polyfilled=""></iframe>
+  <div class="container">
+    <iframe id="iframeid" src="pgz.html" frameborder="0" scrolling="yes" data-ruffle-polyfilled="">
+    </iframe>
   </div>
-
-  <script>
-    // 默认值
-    const defaultSrc = "./pgz.html";
-    const defaultHeightAdd = 250;
-    const defaultMarginTop = -170;
-
-    // 1. 从 URL 获取参数
-    const urlParams = new URLSearchParams(window.location.search);
-    const srcFromUrl = urlParams.get('src');
-    const heightAddFromUrl = urlParams.get('heightAdd');
-    const marginTopFromUrl = urlParams.get('marginTop');
-
-    // 2. 从 sessionStorage 获取上次保存的参数
-    const savedParams = JSON.parse(sessionStorage.getItem('gamePageParams') || 'null');
-
-    // 3. 决定最终使用哪些值：URL > sessionStorage > 默认值
-    const src = srcFromUrl || savedParams?.src || defaultSrc;
-    const heightAdd = parseInt(heightAddFromUrl) || parseInt(savedParams?.heightAdd) || defaultHeightAdd;
-    const marginTop = parseInt(marginTopFromUrl) || parseInt(savedParams?.marginTop) || defaultMarginTop;
-
-    // 4. 将本次最终使用的参数保存回 sessionStorage（用于下次“返回”时恢复）
-    const currentParams = { src, heightAdd, marginTop };
-    sessionStorage.setItem('gamePageParams', JSON.stringify(currentParams));
-
-    // 5. 构造用于跳转的查询字符串（?src=...&heightAdd=...）
-    const queryString = `?src=${encodeURIComponent(src)}&heightAdd=${heightAdd}&marginTop=${marginTop}`;
-
-    // 6. 设置 iframe
-    document.getElementById('iframeid').src = src;
-    document.getElementById('container').style.height = `calc(100% + ${heightAdd}px)`;
-    document.getElementById('iframeid').style.marginTop = `${marginTop}px`;
-
-    // 7. 设置“返回游戏列表”链接，携带当前参数
-    const gameListLink = document.getElementById('gameListLink');
-    gameListLink.href = 'pgl.html' + queryString;
-
-    // 可选：打印调试信息
-    console.log('当前参数:', currentParams);
-    console.log('返回链接:', gameListLink.href);
-  </script>
-
-
-<script src="chrome-extension://knfhpjhiamcofffhagflplclogcmcjai/ruffle/ruffle.js"></script></body><div style="top: 60px; left: 85%; display: none;" class="flashAiLogo"><div class="flash-ai-circle">AI</div><div class="flash-ai-close">×</div></div></html>
+</body></html>
