@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="350"><g>
+<rect height="100%" width="100%" y="0" x="0" fill="#ffffff"/>
+<ellipse ry="160" rx="160" cy="175" cx="175" fill="#000000"/>
+<ellipse ry="140" rx="140" cy="175" cx="175" fill="#ffffff"/>
+<text xmlns="http://www.w3.org/2000/svg" font-size="100" y="39%" x="50%" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#ff0000">敬请</text>
+<text xmlns="http://www.w3.org/2000/svg" font-size="100" y="70%" x="50%" text-anchor="middle" dominant-baseline="middle" font-weight="bold" fill="#ff0000">期待</text>
+</g></svg>
