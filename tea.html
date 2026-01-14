@@ -18,7 +18,13 @@
       overflow: hidden;
     }
 
-   iframe { position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+    #iframeid {
+      width: 100vw;
+      height: 100%;
+      border: none;
+      margin-top: -180px; /* 可根据需要调整 */
+      display: block;
+    }
      /* 悬浮按钮容器 - 居中靠上 */
     .floating-buttons {
       position: fixed;
@@ -65,7 +71,7 @@
   
   <!-- 主要内容：嵌入外部页面 -->
   <div class="container">
-    <iframe id="iframeid" src="https://g.c211.mom/" frameborder="0" scrolling="yes" data-ruffle-polyfilled="">
+    <iframe id="iframeid" src="pgz.html" frameborder="0" scrolling="yes" data-ruffle-polyfilled="">
     </iframe>
   </div>
 </body></html>
