@@ -1,0 +1,73 @@
+a {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent
+}
+.col-3 {
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%
+}
+dl,ol,ul {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px
+}
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: black;
+}
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+	}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+*,::after,::before {
+    box-sizing: border-box
+}
+.mylist li.col-3 img{display:block;width:30px;height:30px;padding:0px;background:#fff;border-radius:12px;margin:0 auto}
+.mylist{list-style:none;padding:10px 20px;position:relative;z-index:1000;margin:5px 5px;border-radius:15px;background:#ffffffe6;border-radius:8px;/*backdrop-filter: blur(10px);*/box-shadow:0 0.5rem 0.625rem #d4d4d44d}
+.mylist li.col-3{width:100px;transition:0.3s all linear;font-size:14px;overflow:hidden;padding:5px 0px;border-radius:5px;margin:5px 0 5px}
+.mylist li.col-3 svg{display:block;width:45px;height:45px;padding:1px;background:#fff;border-radius:5px;margin:0 auto}
+.mylist li.col-3:hover{background:#eee}
+.mylist li.col-3 span{width:100%;height:26px;line-height:26px;text-align:center;font-size:13px;word-break:break-all;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.mylist li a{color:#555;display:block}
+
+.mylist li.title{width:100%;min-width:auto;margin:0;height:35px;font-size:16px;line-height:33px;padding:0 20px 0 10px;/*border-bottom:1px solid #eee;*/margin-bottom:10px}
