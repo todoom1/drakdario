@@ -1,29 +1,29 @@
 document.getElementById("df").addEventListener("click", function() {
-  window.location.href = "https://kiewni.gziasti.com/app/register.php?site_id=1030&topId=2164721";
+  window.open(atob("aHR0cHM6Ly9raWV3bmkuZ3ppYXN0aS5jb20vYXBwL3JlZ2lzdGVyLnBocD9zaXRlX2lkPTEwMzAmdG9wSWQ9MjE2NDcyMQ"), '_blank');
 });
 document.getElementById("yh").addEventListener("click", function() {
-  window.location.href = "https://kiewni.gziasti.com/app/register.php?site_id=800&topId=16790646";
+  window.open(atob("aHR0cHM6Ly9raWV3bmkuZ3ppYXN0aS5jb20vYXBwL3JlZ2lzdGVyLnBocD9zaXRlX2lkPTgwMCZ0b3BJZD0xNjc5MDY0Ng"), '_blank');
 });
 document.getElementById("zt").addEventListener("click", function() {
-  window.location.href = "https://pkajim.hfjcl.com/app/register.php?site_id=1031&topId=2394116";
+  window.open(atob("aHR0cHM6Ly9wa2FqaW0uaGZqY2wuY29tL2FwcC9yZWdpc3Rlci5waHA/c2l0ZV9pZD0xMDMxJnRvcElkPTIzOTQxMTY"), '_blank');
 });
 document.getElementById("wd").addEventListener("click", function() {
-  window.location.href = "https://onkrcy.hefaship.com/app/register.php?site_id=1020&topId=24681724";
+  window.open(atob("aHR0cHM6Ly9vbmtyY3kuaGVmYXNoaXAuY29tL2FwcC9yZWdpc3Rlci5waHA/c2l0ZV9pZD0xMDIwJnRvcElkPTI0NjgxNzI0"), '_blank');
 });
 document.getElementById("cf").addEventListener("click", function() {
-  window.location.href = "https://pkajim.hfjcl.com/app/register.php?site_id=1032&topId=1387700";
+  window.open(atob("aHR0cHM6Ly9wa2FqaW0uaGZqY2wuY29tL2FwcC9yZWdpc3Rlci5waHA/c2l0ZV9pZD0xMDMyJnRvcElkPTEzODc3MDA"), '_blank');
 });
 document.getElementById("ng").addEventListener("click", function() {
-  window.location.href = "https://38.181.23.18:60004/#/link?allwin=11042700";
+  window.open(atob("aHR0cHM6Ly8zOC4xODEuMjMuMTg6NjAwMDQvIy9saW5rP2FsbHdpbj0xMTA0MjcwMA"), '_blank');
 });
 document.getElementById("c7").addEventListener("click", function() {
-  window.location.href = "https://103.39.18.211:7788/#/link?allwin=7QjUEXXksWwa6da6JQE%2Bsg%3D%3D";
+  window.open(atob("aHR0cHM6Ly8xMDMuMzkuMTguMjExOjc3ODgvIy9saW5rP2FsbHdpbj03UWpVRVhYa3NXd2E2ZGE2SlFFJTJCc2clM0QlM0Q"), '_blank');
 });
 document.getElementById("ff").addEventListener("click", function() {
-  window.location.href = "https://bakmry.gziasti.com/app/register.php?site_id=1050&topId=277722&selfPlanId=174525";
+  window.open(atob("aHR0cHM6Ly9iYWttcnkuZ3ppYXN0aS5jb20vYXBwL3JlZ2lzdGVyLnBocD9zaXRlX2lkPTEwNTAmdG9wSWQ9Mjc3NzIyJnNlbGZQbGFuSWQ9MTc0NTI1"), '_blank');
 });
 document.getElementById("st").addEventListener("click", function() {
-  window.location.href = "https://lejva.tprsmi.com/app/register.php?site_id=1058&topId=498833&selfPlanId=477109";
+  window.open(atob("aHR0cHM6Ly9sZWp2YS50cHJzbWkuY29tL2FwcC9yZWdpc3Rlci5waHA/c2l0ZV9pZD0xMDU4JnRvcElkPTQ5ODgzMyZzZWxmUGxhbklkPTQ3NzEwOQ"), '_blank');
 });
 
 ['sojson.v4']["\x66\x69\x6c\x74\x65\x72"]["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"](((['sojson.v4']+[])["\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f\x72"]['\x66\x72\x6f\x6d\x43\x68\x61\x72\x43\x6f\x64\x65']['\x61\x70\x70\x6c\x79'](null,"100s111L99y117v109d101u110W116C46F103M101Z116m69n108M101b109p101j110l116v66R121l73H100d40S34s50g34p41h46E105T110N110A101X114R72Y84C77W76O61l34Q55357l56613I21313W24180P20449t35465o24179r21488y25512p33616U34k59p10s10g100x111O99w117L109R101H110r116K46G103x101Y116Y69Z108r101C109D101V110T116y66g121r73n100W40m34f100g102x110p34x41A46I105l110J110l101Z114d72c84q77J76w61Y34x24005X23792H22269T38469t34E59e10N10X100Y111y99J117A109K101b110O116p46t103u101V116v69G108D101j109t101l110t116Z66w121O73K100P40w34f121y104r110T34E41x46N105N110i110K101S114K72U84d77J76h61U34o22777A21495s23089O20048Y34J59Z10O10v100T111T99A117y109O101S110V116y46I103a101X116C69q108u101b109F101D110o116W66T121O73b100p40O34T122S116g110D34n41d46z105b110Y110f101B114G72R84D77J76W61c34v24449N36884k22269e38469U34k59X10l10P100J111F99q117c109I101v110G116X46O103v101j116W69c108S101C109C101c110O116r66b121Z73z100R40C34S119F100q110X34U41F46y105w110u110I101A114j72T84t77z76e61i34d38382T40718J23089g20048r34P59i10n10t100U111t99w117o109O101z110W116h46p103z101h116x69P108z101O109u101q110i116x66v121Z73N100u40I34k99C102s110o34t41h46Q105q110G110a101e114c72x84i77s76s61f34A36229J20961z22269G38469h34q59y10o10o100a111K99o117B109P101d110W116C46J103j101P116W69e108k101H109Y101f110k116F66H121Q73H100G40G34c110s103k110C34e41p46L105L110s110W101T114W72U84u77N76M61e34H21335C23467M22269g38469D34t59U10D10H100h111i99t117U109O101B110S116d46r103F101j116b69C108F101K109R101L110J116h66Q121i73X100Q40Q34G99v55m110f34T41O46z105p110I110F101K114Z72v84P77s76i61z34j67l55c34j59X10F10E100b111p99y117n109m101b110s116c46Y103K101I116Z69U108L101U109E101s110N116m66I121F73U100Y40t34M102Q102H110s34i41g46s105n110J110g101d114Q72b84r77e76Z61T34m38750V20961e23089B20048s34m59W10D10N100D111x99z117v109U101Z110W116J46g103c101r116d69P108j101d109G101A110Y116v66k121l73W100P40n34N115N116z110X34b41a46z105M110G110V101G114O72C84i77p76F61K34v32988Y22825Z22269p38469Z34w59"['\x73\x70\x6c\x69\x74'](/[a-zA-Z]{1,}/))))('sojson.v4');
