@@ -17,7 +17,7 @@ document.getElementById("ng").addEventListener("click", function() {
   window.open(atob("aHR0cHM6Ly8zOC4xODEuMjMuMTg6NjAwMDQvIy9saW5rP2FsbHdpbj0xMTA0MjcwMA"), '_blank');
 });
 document.getElementById("c7").addEventListener("click", function() {
-  window.open(atob("aHR0cHM6Ly8xMDMuMzkuMTguMjExOjc3ODgvIy9saW5rP2FsbHdpbj03UWpVRVhYa3NXd2E2ZGE2SlFFJTJCc2clM0QlM0Q"), '_blank');
+  window.open(atob("aHR0cHM6Ly8zOC4xODEuMjMuMjU6NjAwMDUvIy9saW5rP2FsbHdpbj03UWpVRVhYa3NXd2E2ZGE2SlFFJTJCc2clM0QlM0Q="), '_blank');
 });
 document.getElementById("ff").addEventListener("click", function() {
   window.open(atob("aHR0cHM6Ly9iYWttcnkuZ3ppYXN0aS5jb20vYXBwL3JlZ2lzdGVyLnBocD9zaXRlX2lkPTEwNTAmdG9wSWQ9Mjc3NzIyJnNlbGZQbGFuSWQ9MTc0NTI1"), '_blank');
