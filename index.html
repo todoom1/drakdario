@@ -16,6 +16,74 @@
 <link rel="stylesheet" href="./new.css">
 <script async="" src="./list.js"></script>
 <script async="" src="./inpro.js"></script>
+<script>
+        // --- 1. 简单的网络状态监测 ---
+        function updateStatus() {
+            const statusEl = document.getElementById('network-status');
+            if (navigator.onLine) {
+                statusEl.textContent = '🟢 在线 (将尝试从网络获取最新资源)';
+                statusEl.style.color = 'green';
+            } else {
+                statusEl.textContent = '🔴 离线 (将直接从缓存读取)';
+                statusEl.style.color = 'red';
+            }
+        }
+        window.addEventListener('online', updateStatus);
+        window.addEventListener('offline', updateStatus);
+        updateStatus();
+
+        // --- 2. 注册 Service Worker ---
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', async () => {
+                try {
+                    // 注册 sw.js
+                    const registration = await navigator.serviceWorker.register('/sw.js');
+                    console.log('SW 注册成功:', registration.scope);
+                    logToPage('SW 注册成功，作用域: ' + registration.scope);
+
+                    // 监听更新
+                    registration.addEventListener('updatefound', () => {
+                        const newWorker = registration.installing;
+                        console.log('发现新 SW 正在安装...');
+                        
+                        newWorker.addEventListener('statechange', () => {
+                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                // 有新版本且当前页面受控，提示用户刷新
+                                document.getElementById('update-box').style.display = 'block';
+                                logToPage('⚠️ 发现新版本，请刷新页面应用。');
+                            }
+                        });
+                    });
+
+                    // 接收来自 SW 的消息
+                    navigator.serviceWorker.addEventListener('message', event => {
+                        if (event.data.type === 'CACHE_LOG') {
+                            logToPage(event.data.message);
+                        }
+                    });
+
+                } catch (error) {
+                    console.error('SW 注册失败:', error);
+                    logToPage('❌ SW 注册失败: ' + error.message);
+                }
+            });
+        } else {
+            logToPage('❌ 浏览器不支持 Service Worker');
+        }
+
+        // 辅助函数：在页面显示日志
+        function logToPage(msg) {
+            const logEl = document.getElementById('sw-log');
+            const time = new Date().toLocaleTimeString();
+            logEl.innerText = `[${time}] ${msg}`;
+            console.log('[Page Log]', msg);
+        }
+
+        // 刷新页面函数
+        function refreshPage() {
+            window.location.reload();
+        }
+    </script>
 </head>
 <body>
 	<h1 id="1">导航网</h1>
