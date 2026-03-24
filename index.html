@@ -14,78 +14,11 @@
 <meta name="keywords" content="导航网">
 <meta name="description" content="导航网">
 <link rel="stylesheet" href="./new.css">
-    <style>
-        /* 简单的按钮样式 */
-        #update-btn {
-            display: none; /* 默认隐藏 */
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 15px 25px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 16px;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-            z-index: 9999;
-            animation: popIn 0.3s ease-out;
-        }
-        #update-btn:hover {
-            background-color: #0056b3;
-        }
-        @keyframes popIn {
-            from { transform: scale(0); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-    </style>
-<script>
-        let newWorker;
-        // 注册 Service Worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js')
-                .then(registration => {
-                    console.log('SW 注册成功');
-                    // 监听更新状态
-                    registration.addEventListener('updatefound', () => {
-                        newWorker = registration.installing;
-                        console.log('发现新 SW 正在安装...');
-                        newWorker.addEventListener('statechange', () => {
-                            // 当新 SW 安装完成并处于 waiting 状态（等待激活）
-                            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-                                // 显示更新按钮
-                                document.getElementById('update-btn').style.display = 'block';
-                                console.log('新版本已就绪，等待用户确认');
-                            }
-                        });
-                    });
-                    // 监听 SW 更新完成后的刷新
-                    navigator.serviceWorker.addEventListener('controllerchange', () => {
-                        console.log('新 SW 已激活，页面即将刷新以加载新内容');
-                        // 这里可以选择自动刷新，或者提示用户
-                        window.location.reload();
-                    });
-                })
-                .catch(err => console.error('SW 注册失败:', err));
-        }
-        // 绑定按钮点击事件
-        document.getElementById('update-btn').addEventListener('click', () => {
-            if (newWorker) {
-                // 发送消息给 SW，告诉它可以跳过等待直接激活
-                newWorker.postMessage({ type: 'SKIP_WAITING' });
-                
-                // 可选：隐藏按钮防止重复点击
-                document.getElementById('update-btn').style.display = 'none';
-                document.getElementById('update-btn').innerText = '正在更新...';
-            }
-        });
-    </script>
 <script async="" src="./list.js"></script>
 <script async="" src="./inpro.js"></script>
 </head>
 <body>
-	<h1 id="1">导航网</h1><button id="update-btn">🔄发现新版本，点击更新</button>
+	<h1 id="1">导航网</h1>
   <ul class="app-desktop">
      <li id="2" class="app-title">我的应用</li>
 	    <li id="st" class="app-item"><div class="app-icon"><img src="./png/stgj.jpg" alt=""></div><div class="app-name" id="stn"></div></li>
