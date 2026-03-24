@@ -14,6 +14,32 @@
 <meta name="keywords" content="导航网">
 <meta name="description" content="导航网">
 <link rel="stylesheet" href="./new.css">
+    <style>
+        /* 简单的按钮样式 */
+        #update-btn {
+            display: none; /* 默认隐藏 */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            z-index: 9999;
+            animation: popIn 0.3s ease-out;
+        }
+        #update-btn:hover {
+            background-color: #0056b3;
+        }
+        @keyframes popIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+    </style>
 <script>
         let newWorker;
         // 注册 Service Worker
@@ -59,7 +85,7 @@
 <script async="" src="./inpro.js"></script>
 </head>
 <body>
-	<h1 id="1">导航网</h1><h3 id="update-btn"></h3>
+	<h1 id="1">导航网</h1><button id="update-btn">🔄发现新版本，点击更新</button>
   <ul class="app-desktop">
      <li id="2" class="app-title">我的应用</li>
 	    <li id="st" class="app-item"><div class="app-icon"><img src="./png/stgj.jpg" alt=""></div><div class="app-name" id="stn"></div></li>
