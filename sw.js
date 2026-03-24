@@ -1,4 +1,4 @@
-const CACHE_NAME = 'my-site-v1'; // 每次更新内容时，记得手动改这个版本号，或者依靠文件哈希
+const CACHE_NAME = 'my-site-v2'; // 每次更新内容时，记得手动改这个版本号，或者依靠文件哈希
 
 const ASSETS_TO_CACHE = [
   '/',
