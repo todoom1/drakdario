@@ -1,38 +1,46 @@
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>导航网</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-touch-fullscreen" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="full-screen" content="yes">
-<meta name="browsermode" content="application">
-<meta name="x5-fullscreen" content="true">
-<meta name="x5-page-mode" content="app">
-<meta name="lsvn" content="djEuNy4w">
-<meta name="keywords" content="导航网">
-<meta name="description" content="导航网">
-<link rel="stylesheet" href="./new.css">
-<script async="" src="./list.js"></script>
-<script async="" src="./inpro.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>导航网</title>
+    <meta name="keywords" content="导航网">
+    <meta name="description" content="导航网 - 您的掌上娱乐天地">
+    <link rel="icon" href="./svg/fm.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./new.css">
+	<link rel="manifest" href="./manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+	<link rel="apple-touch-icon" href="./svg/fm.svg">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
 <script>
     if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-                .then(reg => console.log('SW registered:', reg.scope))
-                .catch(err => console.error('SW registration failed:', err));
-            
-            // 可选：监听更新并自动刷新 (如果需要用户无感知更新，可去掉下面这段)
-            let refreshing = false;
-            navigator.serviceWorker.addEventListener('controllerchange', () => {
-                if (refreshing) return;
-                refreshing = true;
-                window.location.reload();
-            });
+        navigator.serviceWorker.register('/sw.js')
+            .then(reg => {
+                console.log('SW registered:', reg.scope);
+                // 可选：如果有更新，可以在这里提示用户，而不是强制刷新
+                if (reg.waiting) {
+                    console.log('New version ready, waiting for activation.');
+                }
+            })
+            .catch(err => console.error('SW registration failed:', err));
+        
+        // 2. 监听控制器变更（新版本激活）
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+            if (refreshing) return;
+            refreshing = true;
+            // 新版本激活后，刷新页面以应用
+            window.location.reload();
         });
     }
 </script>
+<script defer src="./list.js"></script>
+<script defer src="./inpro.js"></script>
 </head>
 <body>
 	<h1 id="1">导航网</h1>
